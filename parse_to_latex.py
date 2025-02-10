@@ -4,7 +4,8 @@ import sys
 def parse_challenge(input_filename, output_filename):
     """
     Reads a challenge template file, removes comment lines starting with '%%',
-    and writes the remaining content into a valid LaTeX document.
+    replaces all occurrences of '.svg' with '.png', and writes the remaining content
+    into a valid LaTeX document.
     """
     try:
         with open(input_filename, "r", encoding="utf-8") as infile:
@@ -13,12 +14,14 @@ def parse_challenge(input_filename, output_filename):
         print(f"Error: The file {input_filename} was not found.")
         sys.exit(1)
 
-    # Filter out lines that start with '%%'
+    # Filter out lines that start with '%%' and replace '.svg' with '.png'
     filtered_lines = []
     for line in lines:
         if line.lstrip().startswith("%%"):
             continue
-        filtered_lines.append(line)
+        # Replace all occurrences of '.svg' with '.png'
+        modified_line = line.replace(".svg", ".png")
+        filtered_lines.append(modified_line)
 
     # Updated preamble: the 'questions' environment now creates an enumerate list.
     preamble = r"""\documentclass{scrartcl}
