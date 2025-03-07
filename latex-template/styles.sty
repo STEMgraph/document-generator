@@ -1,0 +1,38 @@
+\ProvidesPackage{styles}
+
+% Paket für Farbdefinitionen
+\usepackage{xcolor}
+
+% Definition der Umgebung 'challenge'
+\newenvironment{challenge}[1]
+  {\vspace{1em}\noindent\textbf{\large #1}\vspace{0.5em}\par\noindent\begin{itshape}}
+  {\end{itshape}\vspace{1em}}
+
+% Definition der Umgebung 'task'
+\newenvironment{task}[1]
+  {\vspace{1em}\noindent\textbf{Aufgabe: #1}\vspace{0.5em}\par\noindent}
+  {\vspace{1em}}
+
+% Definition der Umgebung 'chadescription'
+\newenvironment{chadescription}
+  {\vspace{1em}\noindent\textbf{Beschreibung:}\vspace{0.5em}\par\noindent}
+  {\vspace{1em}}
+
+% Definition der Umgebung 'questions'
+\newenvironment{questions}
+  {\vspace{1em}\begin{enumerate}\renewcommand{\labelenumi}{\arabic{enumi}.}}
+  {\end{enumerate}\vspace{1em}}
+
+% Definition einer "note"-Box
+\newtcolorbox{note}[1][]{
+  colback=yellow!10, colframe=yellow!80!black, fonttitle=\bfseries,
+  title=Hinweis, enhanced, breakable, attach boxed title to top left={xshift=2mm,yshift=-2mm},
+  boxed title style={sharp corners}, boxrule=0.5pt, left=2mm, right=2mm, top=2mm, bottom=2mm, #1
+}
+
+% Definition einer "advice"-Box
+\newtcolorbox{advice}[1][]{
+  colback=blue!10, colframe=blue!80!black, fonttitle=\bfseries,
+  title=Empfehlung, enhanced, breakable, attach boxed title to top left={xshift=2mm,yshift=-2mm},
+  boxed title style={sharp corners}, boxrule=0.5pt, left=2mm, right=2mm, top=2mm, bottom=2mm, #1
+}

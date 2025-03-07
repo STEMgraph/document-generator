@@ -1,0 +1,48 @@
+\documentclass{article}
+
+% ---------------------------
+% Pakete und grundlegende Einstellungen
+% ---------------------------
+\usepackage[utf8]{inputenc}      % UTF-8 Eingabe
+\usepackage[T1]{fontenc}         % T1 Schriftkodierung
+\usepackage{lmodern}             % Latin Modern Schriftarten
+\usepackage[ngerman]{babel}      % Deutsche Sprachunterstützung
+
+\usepackage{geometry}            % Seitenlayout
+\geometry{a4paper, margin=2.5cm}
+
+\usepackage{graphicx}            % Grafiken einbinden
+\usepackage{xcolor}              % Farbunterstützung
+\usepackage{hyperref}            % Hyperlinks
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue
+}
+
+\usepackage{amsmath, amssymb}    % Mathematische Pakete
+\usepackage{enumitem}            % Listen und Aufzählungen
+\usepackage{setspace}            % Zeilenabstand
+\onehalfspacing
+
+\usepackage{listings}            % Quellcode-Darstellungen
+\usepackage{tcolorbox}           % Für hervorgehobene Boxen
+\tcbuselibrary{skins, breakable}
+
+% Import external styles
+\usepackage{styles}              % Eigene Styles aus 'styles.sty'
+
+% ---------------------------
+% Dokumentbeginn
+% ---------------------------
+\begin{document}
+
+\title{{{challenge_title}}}
+\author{{{author}}}
+\date{{{date}}}
+\maketitle
+
+\input{content.tex} % Separates structured content from document setup
+
+\end{document}

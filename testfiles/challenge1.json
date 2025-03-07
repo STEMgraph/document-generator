@@ -1,0 +1,30 @@
+{
+    "meta": {
+        "uuid": "123e4567-e89b-12d3-a456-426614174000",
+        "author": "Jane Doe",
+        "date": "2025-03-03",
+        "tags": ["STEM", "challenge", "learning"]
+    },
+    "learningobjective": "At the end of this challenge, the scholar will be able to perform the required task...",
+    "challenge": {
+        "chatitle": "Basic Usage of the Challenge-Based-Learning Sheets for STEMgraph",
+        "challenge_description": "Challenges are a great way to learn new skills. They are designed to be self-explanatory and atomic, making them reusable and mix-and-matchable. Unlike lengthy tutorials, these challenges allow teachers to arrange multiple learning paths.\\begin{figure}\\centering\\includegraphics[width=0.9\\textwidth]{./assets/example.png}\\caption{Screenshot of the STEMgraph node-network}\\end{figure}",
+        "tasks": [
+            "Write down a skill on a piece of paper that you really like.",
+            "Come up with a clear explanation of why this skill is useful in STEM.",
+            "Explain why this is a basic task to perform.",
+            "Think of 3 to 4 applications of this skill.",
+            "Answer the questions that follow.",
+            "Write a request to ChatGPT using the following prompt:\\\\\\begin{lstlisting}\\\\I am working on github.com/STEMgraph challenges.\\\\Today I worked on the following:<insert raw text of this challenge here>Please give me detailed feedback on my answers to the provided questions.Here are my answers in the correct order:<insert your answers to the task questions here>\\\\end{lstlisting}"
+        ],
+        "questions": [
+            "What is the skill you want to teach your scholars?",
+            "Why do you think it's a foundational skill?",
+            "What are the applications of this skill?",
+            "What prerequisites do you need to perform this skill?",
+            "What is the first step to perform this skill?",
+            "What advice do you have for the scholar at the end of this challenge?"
+        ],
+        "advice": "Let someone from your peer group try out your challenge. Have them open an issue on the GitHub repository and record the time it takes to complete the challenge. A good challenge should take less than 30 minutes to complete."
+    }
+}
